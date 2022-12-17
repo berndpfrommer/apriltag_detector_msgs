@@ -1,4 +1,4 @@
-#
+# -*- cmake -*-
 # Copyright 2022 Bernd Pfrommer <bernd.pfrommer@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,8 +23,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/Apriltag.msg
   msg/ApriltagArrayStamped.msg
   DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
-  ADD_LINTER_TESTS
-  )
+  ADD_LINTER_TESTS)
 
 
 if(BUILD_TESTING)

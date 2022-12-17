@@ -1,4 +1,4 @@
-#
+# -*- cmake -*-
 # Copyright 2022 Bernd Pfrommer <bernd.pfrommer@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,13 +12,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-find_package(catkin REQUIRED
-             COMPONENTS std_msgs geometry_msgs message_generation)
+find_package(catkin REQUIRE COMPONENTS
+  std_msgs geometry_msgs message_generation)
 
-add_message_files(DIRECTORY
-                  msg
-                  FILES
-                  Apriltag.msg ApriltagArrayStamped.msg)
+add_message_files(DIRECTORY msg
+  FILES Apriltag.msg ApriltagArrayStamped.msg)
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)
 
