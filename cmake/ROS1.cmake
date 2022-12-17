@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-find_package(catkin REQUIRE COMPONENTS
+find_package(catkin REQUIRED COMPONENTS
   std_msgs geometry_msgs message_generation)
 
 add_message_files(DIRECTORY msg
